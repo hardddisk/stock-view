@@ -14,7 +14,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "QUOTE", catalog = "test")
+@Table(name = "QUOTES", catalog = "test")
 public class Quote implements Serializable {
     
     
@@ -31,8 +31,17 @@ public class Quote implements Serializable {
     private String quote;
     
     
-    public Quote(){
-        
+    public Quote(){}
+    
+    
+    public Quote(Integer id, String userName, String quote){
+        this.id=id;
+        this.userName=userName;
+        this.quote=quote;
+    }
+
+    public Quote(String userName, String quote) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**

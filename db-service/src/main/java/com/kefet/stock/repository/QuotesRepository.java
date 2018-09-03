@@ -18,7 +18,7 @@ public interface QuotesRepository extends JpaRepository<Quote, Integer> {
     /**
      *
      * @param userName
-     * @return
+     * @return List of Quote
      */
     List<Quote> findByUserName(String userName);
     
